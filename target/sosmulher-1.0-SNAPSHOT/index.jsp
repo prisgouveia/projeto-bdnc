@@ -37,27 +37,29 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="index.jsp" title="Mapa"><span class="glyphicon glyphicon-globe icone"></span></a></li>
-                        <li><a href="nova-denuncia.html" type="button" title="Fazer denúncia"><span class="glyphicon glyphicon-plus icone"></span></a></li>
+                        <li><a href="VerificarUsuarioLogado" type="button" title="Fazer denúncia"><span class="glyphicon glyphicon-plus icone"></span></a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="Configurações">
                                 <span class="glyphicon glyphicon-cog icone"></span><span class="glyphicon caret icone"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="login.html">Sair</a></li>
+                                <li><a href="Logout">Sair</a></li>
                             </ul>
                     </ul>
                 </div>
             </div>
         </nav>
         <input id="pac-input" class="controls" type="text" placeholder="Digite um endereço">
+        
         <div id="tipo-mapas">
             <a href="#" onclick="alterarParaHeatMap()" class="btn btn-xs btn-default" id="btMapaDeCalor">Mapa de Calor</a>
         </div>
+        
         <div id="map" style="width:70%; height:92%"></div>
         
         <div id="conteudoLateral">
             <h3>SOS Mulher - Denuncie casos de violência</h3>
-            <a href="VerificaUsuario" id="btMarcarFoco" class="btn btn-lg">Faça uma denúncia!</a>
+            <a href="VerificarUsuarioLogado" id="btMarcarFoco" class="btn btn-lg">Faça uma denúncia!</a>
             
             <div id="legenda">
                 <h4>Legenda</h4>

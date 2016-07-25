@@ -36,8 +36,8 @@ public class UsuarioDAOImpl implements UsuarioDAO {
         try {
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, usuario.getNome());
-            statement.setString(3, usuario.getEmail());
-            statement.setString(2, usuario.getSenha());
+            statement.setString(2, usuario.getEmail());
+            statement.setString(3, usuario.getSenha());
             statement.execute();
             statement.close();
             connection.close();
