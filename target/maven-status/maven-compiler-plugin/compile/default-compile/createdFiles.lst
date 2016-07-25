@@ -1,0 +1,8 @@
+br\edu\ifpb\bdnc\sosmulher\banco\UsuarioDAO.class
+br\edu\ifpb\bdnc\sosmulher\entidades\Denuncia.class
+br\edu\ifpb\bdnc\sosmulher\banco\DenunciaDAOImpl.class
+br\edu\ifpb\bdnc\sosmulher\banco\DenunciaDAO.class
+br\edu\ifpb\bdnc\sosmulher\banco\CreateConnection.class
+br\edu\ifpb\bdnc\sosmulher\banco\UsuarioDAOImpl.class
+br\edu\ifpb\bdnc\sosmulher\entidades\Usuario.class
+br\edu\ifpb\bdnc\sosmulher\banco\Conexao.class
