@@ -51,9 +51,9 @@
                             <div class="form-group">
                                 <h4>Tipo de Ocorrência:  </h4>
                                 <select name="ocorrencia" class="form-control">
-                                    <option value="bsb">Assédio</option>
-                                    <option value="rj">Estupro</option>  
-                                    <option value="sp">Agressão</option>
+                                    <option value="assedio">Assédio</option>
+                                    <option value="estupro">Estupro</option>  
+                                    <option value="agressao">Agressão</option>
                                 </select>
                             </div>
 
@@ -67,12 +67,12 @@
                             <h4>Nesta situação você foi:</h4>
                             <div class="radio">
                                 <label class="radio-inline">
-                                    <input type="radio" value="vitima" name="tipo" checked>
+                                    <input type="radio" value="vitima" name="situacao" checked>
                                     Vítima da Ocorrência
                                 </label>
 
                                 <label class="radio-inline">
-                                    <input type="radio" value="testemunha" name="tipo">
+                                    <input type="radio" value="testemunha" name="situacao">
                                     Presenciou a Ocorrência
                                 </label>
                             </div>
@@ -96,15 +96,17 @@
                             <div class="form-group">
                                 <textarea class="form-control" id="info" name="info" cols=50 rows=3 required placeholder="Adicione as informações que você julgar importantes para o registro da ocorrência"></textarea>
                             </div>
+                            
+                            <input type="hidden" id="coordenada" name="coordenada">
                             <button type="submit" class="btn btn-default pull-right">
                                 Denunciar
                             </button>
                         </form>
                     </div>
                 </div>
-                <div class="col-md-5 embed-responsive embed-responsive-16by9">
+                <div class="col-md-5 embed-responsive embed-responsive-16by9" onload="initMap()">
+                    
                     <div  id="map" class="embed-responsive-item" style=" height:80%"></div>
-                    <script>addCordenada()</script> 
                 </div>
             </div>
         </div>

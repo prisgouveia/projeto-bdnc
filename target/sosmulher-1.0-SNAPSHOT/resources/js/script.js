@@ -24,6 +24,11 @@ function initMap() {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
   }
+  google.maps.event.addListener(map, 'click', function(event) {
+        var coordenada = event.latLng;
+        document.getElementById('coordenada').value = coordenada;
+    });
+    
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
