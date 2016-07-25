@@ -37,3 +37,13 @@ function initialize() {
 		script.src = src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRIyAgKD5uTIEUwTcnfAW_SuJqyqnahtc&callback=initMap&region=br";
 		document.body.appendChild(script);
 	}
+
+
+
+/* adicinando funcoes */
+
+function addCordenada(){
+    var coordenada = google.maps.event.addListener(map, 'click', function(event) {
+         alert(coordenada)
+    });
+}
