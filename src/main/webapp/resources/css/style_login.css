@@ -1,0 +1,47 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25/07/2016, 00:27:22
+    Author     : Priscila Gouveia <priscilaggouveia@gmail.com>
+*/
+
+body{
+    background-image: url(../img/back2.jpg);
+    font-family:'Slabo 27px', serif;
+    font-size: 22px;
+}
+.row{
+    margin-top: 100px;
+    padding-right:120px;
+    padding-left: 120px;
+    margin-bottom:60px;
+
+
+}
+
+.texto{
+    color:#CD0000;
+    font-size: 19px;
+}
+
+form{
+    font-size:14px;
+    color:#828282;
+    background-color:black;
+    opacity:0.90;
+    padding: 18px;
+    margin-bottom:60px;
+}
+
+footer{
+    font-size:13px;
+    background-color:black;
+}
+
+a, a:hover{
+    color:#828282 !important;
+}
+
