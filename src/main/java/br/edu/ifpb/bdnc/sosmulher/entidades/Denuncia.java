@@ -111,6 +111,11 @@ public class Denuncia {
         this.data.setMonth(mes);
     }
 
+    @Override
+    public String toString() {
+        return "Denuncia{" + "id=" + id + ", info=" + info + ", localizacao=" + localizacao + ", data=" + data + ", situacao=" + situacao + ", ocorrencia=" + ocorrencia + ", lat=" + lat + ", lgt=" + lgt + '}';
+    }
+
     
     
 }

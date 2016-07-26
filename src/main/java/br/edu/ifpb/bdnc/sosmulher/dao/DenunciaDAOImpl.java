@@ -37,8 +37,9 @@ public class DenunciaDAOImpl implements DenunciaDAO{
     
     @Override
     public void cadastrarDenuncia(Denuncia denuncia) {
+        System.out.println(denuncia.toString());
         String sql = "INSERT INTO DENUNCIA (ocorrencia, data, situacao, info, ponto) VALUES "
-                + "(?, ?, ?, st_geomFromText('Point(" + denuncia.getLocalizacao().getCoordinate().x +" "
+                + "(?, ?, ?, ?, st_geomFromText('Point(" + denuncia.getLocalizacao().getCoordinate().x +" "
                 + denuncia.getLocalizacao().getCoordinate().y +")'))";
         try {
             PreparedStatement statement = connection.prepareStatement(sql);
@@ -46,7 +47,7 @@ public class DenunciaDAOImpl implements DenunciaDAO{
             Date data = new Date(denuncia.getData().getTime());
             statement.setDate(2, data);
             statement.setString(3, denuncia.getSituacao());
-            statement.setString(3, denuncia.getInfo());
+            statement.setString(4, denuncia.getInfo());
             statement.execute();
             statement.close();
             connection.close();

@@ -11,7 +11,7 @@ function initialize() {
 			center: new google.maps.LatLng(-25.363882,131.044922),
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		}
-		var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+		var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
 		google.maps.event.addListener(map, 'click', function(event) {
     		placeMarker(event.latLng);
   		});
@@ -27,12 +27,7 @@ function initialize() {
 		$('#latitude').val(location.lat())
 		$('#longitude').val(location.lng())
 		map.setCenter(location);
-                
 	}
-        
-        google.maps.event.addListener(map, 'click', function(event) {
-        alert(event.latLng)
-});
 	}
 
 
@@ -45,11 +40,10 @@ function initialize() {
 
 
 
-
 /* adicinando funcoes */
-function addCoordenada(){
-    var coordenada = google.maps.event.addListener(map, 'click', function(event) {
-        return coordenada;
-    });
 
+function addCordenada(){
+    var coordenada = google.maps.event.addListener(map, 'click', function(event) {
+         alert(coordenada)
+    });
 }

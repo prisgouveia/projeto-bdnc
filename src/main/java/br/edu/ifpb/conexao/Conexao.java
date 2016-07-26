@@ -20,7 +20,7 @@ public class Conexao {
     protected Conexao() {
         String url = "jdbc:postgresql://localhost:5432/sosmulher";
         String usuario = "postgres";
-        String senha = "1234";
+        String senha = "123";
         try {
             Class.forName("org.postgresql.Driver");
             conn = DriverManager.getConnection(url, usuario, senha);

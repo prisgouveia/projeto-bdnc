@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class CadastrarDenuncia extends HttpServlet {
 
-   @Override
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         doPost(request, response);
@@ -32,8 +32,12 @@ public class CadastrarDenuncia extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String lat = request.getParameter("latitude");
-        String lgt = request.getParameter("longitude");
+        String[] coordenada = request.getParameter("coordenada").split(", ");
+        String lat = coordenada[0].replace("(", "");        
+        String lgt = coordenada[1].replace(")", "");
+        
+        System.out.println("POINT(" + lat + " " + lgt + ")");
+        
         String ocorrencia = request.getParameter("ocorrencia");
         String data = request.getParameter("data");
         String situacao = request.getParameter("situacao");
@@ -46,13 +50,13 @@ public class CadastrarDenuncia extends HttpServlet {
         denuncia.setInfo(info);
         try {
             WKTReader reader = new WKTReader();
-            Geometry ponto = reader.read("POINT("+lat+" "+ lgt+")");
+            Geometry ponto = reader.read("POINT(" + lat + " " + lgt + ")");
             denuncia.setLocalizacao(ponto);
         } catch (ParseException ex) {
             ex.printStackTrace();
         }
         servico.cadastrarDenuncia(denuncia);
-        response.sendRedirect("ExibirDenuncias");
+        response.sendRedirect("ExibirPontos");
     }
-    
+
 }

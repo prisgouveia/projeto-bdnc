@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
     <servlet>
         <servlet-name>Login</servlet-name>
         <servlet-class>br.edu.ifpb.bdnc.sosmulher.servlets.Login</servlet-class>
@@ -9,12 +9,16 @@
         <servlet-class>br.edu.ifpb.bdnc.sosmulher.servlets.CadastrarUsuario</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>logout</servlet-name>
-        <servlet-class>br.edu.ifpb.bdnc.sosmulher.servlets.logout</servlet-class>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>br.edu.ifpb.bdnc.sosmulher.servlets.Logout</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>CadastrarDenuncia</servlet-name>
         <servlet-class>br.edu.ifpb.bdnc.sosmulher.servlets.CadastrarDenuncia</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VerificarUsuarioLogado</servlet-name>
+        <servlet-class>br.edu.ifpb.bdnc.sosmulher.servlets.VerificarUsuarioLogado</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
@@ -25,16 +29,18 @@
         <url-pattern>/CadastrarUsuario</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>logout</servlet-name>
-        <url-pattern>/logout</url-pattern>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/Logout</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>CadastrarDenuncia</servlet-name>
         <url-pattern>/CadastrarDenuncia</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VerificarUsuarioLogado</servlet-name>
+        <url-pattern>/VerificarUsuarioLogado</url-pattern>
+    </servlet-mapping>
     <session-config>
-        <session-timeout>
-            30
-        </session-timeout>
+        <session-timeout>30</session-timeout>
     </session-config>
 </web-app>
