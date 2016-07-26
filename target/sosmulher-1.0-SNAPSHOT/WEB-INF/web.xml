@@ -20,6 +20,10 @@
         <servlet-name>VerificarUsuarioLogado</servlet-name>
         <servlet-class>br.edu.ifpb.bdnc.sosmulher.servlets.VerificarUsuarioLogado</servlet-class>
     </servlet>
+     <servlet>
+        <servlet-name>ExibirPontos</servlet-name>
+        <servlet-class>br.edu.ifpb.bdnc.sosmulher.servlets.ExibirPontos</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>VerificarUsuarioLogado</servlet-name>
         <url-pattern>/VerificarUsuarioLogado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ExibirPontos</servlet-name>
+        <url-pattern>/ExibirPontos</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

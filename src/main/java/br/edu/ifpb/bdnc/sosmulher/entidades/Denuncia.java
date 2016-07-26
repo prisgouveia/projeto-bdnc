@@ -6,6 +6,7 @@
 package br.edu.ifpb.bdnc.sosmulher.entidades;
 
 import com.vividsolutions.jts.geom.Geometry;
+import java.time.LocalDate;
 import java.util.Date;
 
 
@@ -26,7 +27,7 @@ public class Denuncia {
     public Denuncia() {
     }
 
-    public Denuncia(long id, String info, Geometry localizacao, Date data, String situacao, String ocorrencia, double lat, double lgt) {
+    public Denuncia(long id, String info, Geometry localizacao,Date data, String situacao, String ocorrencia, double lat, double lgt) {
         this.id = id;
         this.info = info;
         this.localizacao = localizacao;
@@ -103,13 +104,13 @@ public class Denuncia {
         this.lgt = lgt;
     }
 
-    public void setData(String data) {
-        this.data = new java.util.Date();
-        int ano = Integer.parseInt(data.substring(0, 4));
-        int mes = Integer.parseInt(data.substring(5, 7));
-        this.data.setYear(ano);
-        this.data.setMonth(mes);
-    }
+//    public void setData(String data) {
+//        this.data = LocalDate.now();
+//        int ano = Integer.parseInt(data.substring(0, 4));
+//        int mes = Integer.parseInt(data.substring(5, 7));
+//        this.data.setYear(ano);
+//        this.data.setMonth(mes);
+//    }
 
     
     

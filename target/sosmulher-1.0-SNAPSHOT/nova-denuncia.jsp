@@ -17,9 +17,9 @@
         <link href="resources/css/bootstrap.min.css" rel="stylesheet">
         <link rel="shortcut icon" href="resources/img/sos.png" >
         <script src="resources/js/script_maps.js"></script>
-        <script src="resources/js/script.js"></script>
+       <script src="resources/js/script.js"></script>
     </head>
-    <body Onload="loadScript()">
+    <body onload="loadScript()">
         <nav class="navbar navbar-inverse  ">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -66,7 +66,7 @@
                             <h4>Data</h4>
                             <div class="form-group">
                                 <label>
-                                    <input type="month" class="form-control" name="data" id="data">
+                                    <input type="date" class="form-control" name="data" id="data">
                                 </label>
                             </div>
 
@@ -102,13 +102,14 @@
                             <div class="form-group">
                                 <textarea class="form-control" id="info" name="info" cols=50 rows=3 required placeholder="Adicione as informações que você julgar importantes para o registro da ocorrência"></textarea>
                             </div>
+                            <input type="hidden" id="coordenada" name="coordenada">
                             <button type="submit" class="btn btn-default pull-right">
                                 Denunciar
                             </button>
                         </form>
                     </div>
                 </div>
-                <div class="col-md-5 embed-responsive embed-responsive-16by9">
+                <div class="col-md-5 embed-responsive embed-responsive-16by9" onload="initMap()">
                     <div  id="map" class="embed-responsive-item" style=" height:80%"></div>
                 </div>
             </div>

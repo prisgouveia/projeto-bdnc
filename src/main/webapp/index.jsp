@@ -39,7 +39,7 @@
                         <li><a href="index.jsp" title="Mapa"><span class="glyphicon glyphicon-globe icone"></span></a></li>
                         <li><a href="VerificarUsuarioLogado" type="button" title="Fazer denúncia"><span class="glyphicon glyphicon-plus icone"></span></a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="Configurações">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="C">
                                 <span class="glyphicon glyphicon-cog icone"></span><span class="glyphicon caret icone"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
